@@ -1,20 +1,23 @@
 import React from 'react';
 import {getPagesArray} from "../../../utils/pages";
+import MyButton from '../button/MyButton';
 
 const Pagination = ({totalPages, page, changePage}) => {
     let pagesArray = getPagesArray(totalPages);
     return (
-        <div className="page__wrapper">
-            {pagesArray.map(p =>
-                <span
-                    onClick={() => changePage(p)}
-                    key={p}
-                    className={page === p ? 'page page__current' : 'page'}
-                >
-                        {p}
-                    </span>
-            )}
-        </div>
+        <div style={{marginTop: '10px',
+        marginBottom: '10px', display: 'flex',
+        justifyContent: 'center'}}>
+        {pagesArray.map(p =>
+          <MyButton 
+          key={p}
+          style={{backgroundColor: page==p ? 'rgb(216, 250, 250)' : 'white'}}
+          onClick={() => changePage(p)}
+          >
+            {p}
+            </MyButton>
+          )}
+          </div>
     );
 };
 
