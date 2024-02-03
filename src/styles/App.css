@@ -18,6 +18,8 @@
     display: flex;
     padding: 15px;
     border: 2px solid teal;
+    border-radius: 15px;
+    background-color: rgb(216, 250, 250);
     margin-top: 15px;
     justify-content: space-between;
     align-items: center;
@@ -64,9 +66,22 @@
     display: flex;
     align-items: center;
     padding: 0 15px;
-    background: lightgray;
+    background: rgb(152, 236, 208);
 }
 
 .navbar__links {
-    margin-left: auto;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+}
+.links{
+    color: #212529;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+}
+
+.links:hover{
+    color: #007bff;
 }
